@@ -13,26 +13,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="(Un)check the boxes to style Mr Potatohead!" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="11dp"
-        android:text="Click the random button for a random outfit!" />
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:text="@string/title"
+        android:textSize="32sp"/>
 
-    <!-- body image -->
     <ImageView
         android:id="@+id/image_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/body"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
+        android:contentDescription="@string/body"
         />
 
-    <!-- nose image -->
     <ImageView
         android:id="@+id/image_nose"
         android:layout_width="wrap_content"
@@ -40,11 +36,11 @@
         android:src="@drawable/nose"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/nose"
         />
 
-    <!-- eyes image -->
     <ImageView
         android:id="@+id/image_eyes"
         android:layout_width="wrap_content"
@@ -52,11 +48,11 @@
         android:src="@drawable/eyes"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/eyes"
         />
 
-    <!-- eyebrows image -->
     <ImageView
         android:id="@+id/image_eyebrows"
         android:layout_width="wrap_content"
@@ -64,10 +60,11 @@
         android:src="@drawable/eyebrows"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
+        android:contentDescription="@string/eyebrows"
         />
 
-    <!-- shoes image -->
     <ImageView
         android:id="@+id/image_shoes"
         android:layout_width="wrap_content"
@@ -75,11 +72,11 @@
         android:src="@drawable/shoes"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/shoes"
         />
 
-    <!-- glasses image -->
     <ImageView
         android:id="@+id/image_glasses"
         android:layout_width="wrap_content"
@@ -87,11 +84,11 @@
         android:src="@drawable/glasses"
         android:visibility="invisible"
         android:layout_marginTop="80dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/glasses"
         />
 
-    <!-- arms image -->
     <ImageView
         android:id="@+id/image_arms"
         android:layout_width="wrap_content"
@@ -99,11 +96,11 @@
         android:src="@drawable/arms"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/arms"
         />
 
-    <!-- mouth image -->
     <ImageView
         android:id="@+id/image_mouth"
         android:layout_width="wrap_content"
@@ -111,10 +108,11 @@
         android:src="@drawable/mouth"
         android:visibility="invisible"
         android:layout_marginTop="75dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
+        android:contentDescription="@string/mouth"
         />
 
-    <!-- mustache image -->
     <ImageView
         android:id="@+id/image_mustache"
         android:layout_width="wrap_content"
@@ -122,10 +120,11 @@
         android:src="@drawable/mustache"
         android:visibility="invisible"
         android:layout_marginTop="65dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
+        android:contentDescription="@string/mustache"
         />
 
-    <!-- ears image -->
     <ImageView
         android:id="@+id/image_ears"
         android:layout_width="wrap_content"
@@ -133,11 +132,11 @@
         android:src="@drawable/ears"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/ears"
         />
 
-    <!-- hat image -->
     <ImageView
         android:id="@+id/image_hat"
         android:layout_width="wrap_content"
@@ -145,14 +144,16 @@
         android:src="@drawable/hat"
         android:visibility="invisible"
         android:layout_marginTop="70dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-
+        android:contentDescription="@string/hat"
         />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
+        android:layout_marginStart="375dp"
         android:layout_marginLeft="375dp"
         android:orientation="vertical"
         android:layout_alignParentEnd="true"
@@ -163,21 +164,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <!-- arms checkbox -->
             <CheckBox android:id="@+id/checkbox_arms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="arms"
+                android:text="@string/arms"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/arms" -->
 
-            <!-- ears checkbox -->
             <CheckBox android:id="@+id/checkbox_ears"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ears"
+                android:text="@string/ears"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/ears" -->
 
         </TableRow>
 
@@ -185,21 +182,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <!-- eyebrows checkbox -->
             <CheckBox android:id="@+id/checkbox_eyebrows"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="eyebrows"
+                android:text="@string/eyebrows"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/eyebrows" -->
 
-            <!-- eyes checkbox -->
             <CheckBox android:id="@+id/checkbox_eyes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="eyes"
+                android:text="@string/eyes"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/eyes" -->
 
         </TableRow>
 
@@ -207,21 +200,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <!-- glasses checkbox -->
             <CheckBox android:id="@+id/checkbox_glasses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="glasses"
+                android:text="@string/glasses"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/glasses" -->
 
-            <!-- hat checkbox -->
             <CheckBox android:id="@+id/checkbox_hat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hat"
+                android:text="@string/hat"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/hat" -->
 
         </TableRow>
 
@@ -229,21 +218,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <!-- mouth checkbox -->
             <CheckBox android:id="@+id/checkbox_mouth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="mouth"
+                android:text="@string/mouth"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/mouth" -->
 
-            <!-- mustache checkbox -->
             <CheckBox android:id="@+id/checkbox_mustache"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="mustache"
+                android:text="@string/mustache"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/mustache" -->
 
         </TableRow>
 
@@ -251,35 +236,40 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <!-- nose checkbox -->
             <CheckBox android:id="@+id/checkbox_nose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="nose"
+                android:text="@string/nose"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/nose" -->
 
-            <!-- shoes checkbox -->
             <CheckBox android:id="@+id/checkbox_shoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="shoes"
+                android:text="@string/shoes"
                 android:onClick="onCheckboxClicked"/>
-            <!-- android:text="@string/shoes" -->
 
         </TableRow>
 
     </TableLayout>
 
     <Button
-        android:text="Random"
+        android:text="@string/random"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="225dp"
-        android:layout_marginLeft="250dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginLeft="360dp"
         android:id="@+id/random"
-        android:onClick="onButtonClicked" />
+        android:onClick="onRandomButtonClicked" />
+
+    <Button
+        android:text="@string/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        android:layout_marginStart="475dp"
+        android:layout_marginLeft="475dp"
+        android:id="@+id/clear"
+        android:onClick="onClearButtonClicked" />
 
 </RelativeLayout>

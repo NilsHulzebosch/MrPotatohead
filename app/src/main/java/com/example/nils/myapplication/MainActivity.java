@@ -2,7 +2,6 @@ package com.example.nils.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-// import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.view.View;
@@ -74,61 +73,71 @@ public class MainActivity extends AppCompatActivity {
         initializeImages();
         initializeCheckboxes();
 
-        /* Check whether there is a saved instance state (from rotation).
-         * If this is not the case, proceed.
-         * If this is the case, check all booleans and whenever a boolean is true,
-         * set image to visible and checkbox to checked to recover old state.
-         */
-        if (savedInstanceState != null) {
+        // if orientation changed during random, simply run random again
+        if(randomIsRunning) {
+            // this chooses the final configuration, after 2901 milliseconds
+            Handler h = new Handler();
+            h.postDelayed(image_for_final_config, 2901);
+            randomAnimation(); // this makes the animation, during 2850 milliseconds
 
-            if (savedInstanceState.getBoolean("arms")) {
-                img_arms.setVisibility(View.VISIBLE); // set image to visible
-                check_arms.setChecked(true); // set checkbox to checked
-            }
+        } else {
 
-            if (savedInstanceState.getBoolean("ears")) {
-                img_ears.setVisibility(View.VISIBLE); // set image to visible
-                check_ears.setChecked(true); // set checkbox to checked
-            }
+            /* Check whether there is a saved instance state (from rotation).
+             * If this is not the case, proceed.
+             * If this is the case, check all booleans and whenever a boolean is true,
+             * set image to visible and checkbox to checked to recover old state.
+             */
+            if (savedInstanceState != null) {
 
-            if (savedInstanceState.getBoolean("eyebrows")) {
-                img_eyebrows.setVisibility(View.VISIBLE); // set image to visible
-                check_eyebrows.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("arms")) {
+                    img_arms.setVisibility(View.VISIBLE); // set image to visible
+                    check_arms.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("eyes")) {
-                img_eyes.setVisibility(View.VISIBLE); // set image to visible
-                check_eyes.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("ears")) {
+                    img_ears.setVisibility(View.VISIBLE); // set image to visible
+                    check_ears.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("glasses")) {
-                img_glasses.setVisibility(View.VISIBLE); // set image to visible
-                check_glasses.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("eyebrows")) {
+                    img_eyebrows.setVisibility(View.VISIBLE); // set image to visible
+                    check_eyebrows.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("hat")) {
-                img_hat.setVisibility(View.VISIBLE); // set image to visible
-                check_hat.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("eyes")) {
+                    img_eyes.setVisibility(View.VISIBLE); // set image to visible
+                    check_eyes.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("mouth")) {
-                img_mouth.setVisibility(View.VISIBLE); // set image to visible
-                check_mouth.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("glasses")) {
+                    img_glasses.setVisibility(View.VISIBLE); // set image to visible
+                    check_glasses.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("mustache")) {
-                img_mustache.setVisibility(View.VISIBLE); // set image to visible
-                check_mustache.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("hat")) {
+                    img_hat.setVisibility(View.VISIBLE); // set image to visible
+                    check_hat.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("nose")) {
-                img_nose.setVisibility(View.VISIBLE); // set image to visible
-                check_nose.setChecked(true); // set checkbox to checked
-            }
+                if (savedInstanceState.getBoolean("mouth")) {
+                    img_mouth.setVisibility(View.VISIBLE); // set image to visible
+                    check_mouth.setChecked(true); // set checkbox to checked
+                }
 
-            if (savedInstanceState.getBoolean("shoes")) {
-                img_shoes.setVisibility(View.VISIBLE); // set image to visible
-                check_shoes.setChecked(true); // set checkbox to checked
+                if (savedInstanceState.getBoolean("mustache")) {
+                    img_mustache.setVisibility(View.VISIBLE); // set image to visible
+                    check_mustache.setChecked(true); // set checkbox to checked
+                }
+
+                if (savedInstanceState.getBoolean("nose")) {
+                    img_nose.setVisibility(View.VISIBLE); // set image to visible
+                    check_nose.setChecked(true); // set checkbox to checked
+                }
+
+                if (savedInstanceState.getBoolean("shoes")) {
+                    img_shoes.setVisibility(View.VISIBLE); // set image to visible
+                    check_shoes.setChecked(true); // set checkbox to checked
+                }
             }
         }
     }
@@ -205,8 +214,6 @@ public class MainActivity extends AppCompatActivity {
 
             resetImages(); // set the current images to invisible
             resetCheckboxes(); // set the current checkboxes to unchecked
-
-            int random = (int) (Math.random() * 6); // take random variable between 0 and 6
 
             // this chooses the final configuration, after 2901 milliseconds
             Handler h = new Handler();
