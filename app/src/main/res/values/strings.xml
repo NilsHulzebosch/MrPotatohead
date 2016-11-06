@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Mr Potatohead</string>
+    <string name="explanation">Have fun styling Mr Potatohead!</string>
+    <string name="arms">arms</string>
+    <string name="body">body</string>
+    <string name="ears">ears</string>
+    <string name="eyebrows">eyebrows</string>
+    <string name="eyes">eyes</string>
+    <string name="glasses">glasses</string>
+    <string name="hat">hat</string>
+    <string name="mouth">mouth</string>
+    <string name="mustache">mustache</string>
+    <string name="nose">nose</string>
+    <string name="shoes">shoes</string>
+    <string name="random">Random</string>
+    <string name="clear">Clear</string>
 </resources>
